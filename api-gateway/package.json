@@ -1,0 +1,27 @@
+{
+  "name": "api-gateway",
+  "version": "1.0.0",
+  "description": "An expressjs api-gateway",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "jest && node index.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "author": "Mrsmithz",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "redis": "^4.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.1.6"
+  }
+}

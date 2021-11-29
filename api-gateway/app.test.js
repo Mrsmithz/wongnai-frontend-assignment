@@ -29,7 +29,7 @@ describe('Trips API Testing', () => {
         const response = await request(app).get('/api/v1/trips')
         expect(response.body).toBeInstanceOf(Array)
     })
-    it('Length should be same for all trips request', async () => {
+    it('Should return all trips', async () => {
         const response = await request(app).get('/api/v1/trips')
         expect(response.body.length).toEqual(Trips.length)
     })

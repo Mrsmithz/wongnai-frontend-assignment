@@ -47,6 +47,7 @@ module.exports.getTrips = async (req, res, next) => {
 
             // Set cache with provided keyword for fast query next time
             await redisClient.set(keyword, JSON.stringify(filteredTrips), {
+                // Set chache expiration time
                 EX: TIMES.TEN_MINUTES
             })
             logger(`Set Cache ${keyword}`)
